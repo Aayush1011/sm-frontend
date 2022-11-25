@@ -356,7 +356,9 @@ class SinglePost extends Component {
           <h2>
             Created by {this.state.author} on {this.state.date}
           </h2>
-          {this.state.updatedAt && <h2>Edited on {this.state.updatedAt}</h2>}
+          {this.state.updatedAt !== this.state.createdAt && (
+            <h2>Edited on {this.state.updatedAt}</h2>
+          )}
           <div className="single-post__image">
             <Image contain imageUrl={this.state.image} />
           </div>

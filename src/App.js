@@ -62,7 +62,7 @@ class App extends Component {
   loginHandler = (event, authData) => {
     event.preventDefault();
     this.setState({ authLoading: true });
-    fetch("http://localhost:8080/auth/login", {
+    fetch("https://sm-backend.onrender.com/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -113,7 +113,7 @@ class App extends Component {
   signupHandler = (event, authData) => {
     event.preventDefault();
     this.setState({ authLoading: true });
-    fetch("http://localhost:8080/auth/signup", {
+    fetch("https://sm-backend.onrender.com/auth/signup", {
       method: "PUT",
       mode: "cors",
       headers: {
